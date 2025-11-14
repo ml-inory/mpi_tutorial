@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-    // 初始化 MPI 环境
+    // 初始化 MPI 环境, 两个参数实际上要使用argc和argv，这里不传
     MPI_Init(NULL, NULL);
 
     // 获取可以工作的进程数量world_size
@@ -23,6 +23,6 @@ int main(int argc, char** argv) {
 
     // 释放MPI的资源
     MPI_Finalize();
-    
+
     return 0;
 }
