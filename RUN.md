@@ -7,3 +7,6 @@ hello_wolrd:
 
 simple_send_recv:  
 ```mpirun -n 2 ./install/simple_send_recv```
+
+pingpong:
+```mpirun -n 2 ./install/pingpong```
