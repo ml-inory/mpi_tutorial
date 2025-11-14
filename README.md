@@ -23,6 +23,9 @@ sudo apt-get install mpich
 
 ```mpirun -n 进程数 程序```
 
+  
+进程数量设置太大的话可能会让系统崩溃
+
 示例:
 ```
 mpirun -n 4 ./install/hello_world
@@ -44,7 +47,17 @@ server3
 server4
 ```
 
+如果想让MPI在每个节点的多个核上生成进程，再去其他的奇迹，可以在节点后面加上冒号和处理器核数，如:
+```
+server1:2
+server2:1
+server3:4
+server4:8
+```
+
 运行时通过-f参数指定host文件路径，或者通过MPI_HOSTS环境变量配置, 如:
 ```
 mpirun -n 4 -f host_file ./install/hello_world
 ```
+
+各个程序的运行方式在[RUN.md](/RUN.md)
