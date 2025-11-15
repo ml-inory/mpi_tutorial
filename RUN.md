@@ -11,5 +11,8 @@ simple_send_recv:
 pingpong:  
 ```mpirun -n 2 ./install/pingpong```
 
-ring_send_recv:  
+ring_send_recv:    
 ```mpirun -n 4 ./install/ring_send_recv```
+
+random_count:  
+```mpirun -n 2 ./install/random_count```

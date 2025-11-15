@@ -19,6 +19,13 @@ target_link_libraries(pingpong ${MPI_C_LIBRARIES})
 add_executable(ring_send_recv p2p/ring_send_recv.cpp)
 target_link_libraries(ring_send_recv ${MPI_C_LIBRARIES})
 
-install(TARGETS hello_world simple_send_recv pingpong ring_send_recv
+add_executable(random_count p2p/random_count.cpp)
+target_link_libraries(random_count ${MPI_C_LIBRARIES})
+
+install(TARGETS hello_world 
+                simple_send_recv 
+                pingpong 
+                ring_send_recv 
+                random_count
         RUNTIME
         DESTINATION ./)
