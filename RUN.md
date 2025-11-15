@@ -8,5 +8,8 @@ hello_wolrd:
 simple_send_recv:  
 ```mpirun -n 2 ./install/simple_send_recv```
 
-pingpong:
+pingpong:  
 ```mpirun -n 2 ./install/pingpong```
+
+ring_send_recv:  
+```mpirun -n 4 ./install/ring_send_recv```
